@@ -25,18 +25,55 @@ function Counter(){
         setCount(prevCount => prevCount + amount);
     };
 
+    //Method 2: Higher-order function approch
+
+    const creatChangeHandler =
+    (amount) => () => {
+        return()=>{
+        setCount(prevCount => prevCount + amount);
+    };
+    };
+
     return(
         <div style={{textAlign:'center',padding:'20px'}}>
-            <h2>Intractive Counter</h2>
-            <div style={{fontSize:'2rm',margin:'20px'}}>
+            <h2> Counter with custom Amounts</h2>
+            <div style={{fontSize:'2rm',margin:'20px', color: count <0?'red':'black'}}>
             Count: {count}
             </div>
-            <div>
-                <CounterButton onButtonClick={incrementCount} color="yellow" style={{margin:'5px'}}>+Increment</CounterButton>
-                <CounterButton onButtonClick={decrementCount} color="red" style={{margin:'5px'}}>-Decrement</CounterButton>
-                <CounterButton onButtonClick={resetCount} color="blue" style={{margin:'5px'}}>Reset</CounterButton>
-                <CounterButton onButtonClick={() => setCount(100)} color="purple" style={{margin:'5px'}}>Set to 100</CounterButton>
-                <CounterButton onButtonClick={() => setCount(prevCount=> prevCount*2)} color="green" style={{margin:'5px'}}>Set to Double</CounterButton>
+            <div style={{marginBottom:'10px'}}>
+                <h3>Quick Changes</h3>
+                <CounterButton
+                onButtonClick={()=>handleChangeBy(1)}
+                color ='lightgreen'>+1  </CounterButton>
+
+                <CounterButton
+                onButtonClick={()=>handleChangeBy(5)}
+                color ='green'>+5  </CounterButton>
+
+                <CounterButton
+                onButtonClick={()=>handleChangeBy(10)}
+                color ='darkgreen'>+10  </CounterButton>
+
+                <CounterButton
+                onButtonClick={()=>handleChangeBy(-1)}
+                color ='lightred'>-1  </CounterButton>
+
+                <CounterButton
+                onButtonClick={()=>handleChangeBy(-5)}
+                color ='red'>-5  </CounterButton>
+
+                <CounterButton
+                onButtonClick={()=>handleChangeBy(-10)}
+                color ='darkred'>-10  </CounterButton>
+
+                <CounterButton
+                onButtonClick={()=>resetCount()}
+                color ='gray'>Reset  </CounterButton>
+
+
+                <CounterButton
+                onButtonClick={creatChangeHandler(25)}
+                color ='purple'>+25 (HOF)  </CounterButton>
             </div>
         </div>
     )
