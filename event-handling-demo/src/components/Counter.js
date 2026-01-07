@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import CounterButton from "./CounterButton";
 
 function Counter(){
 
@@ -7,16 +8,21 @@ function Counter(){
     const [count, setCount] = useState(0);
     //function to increment count
     const incrementCount = () => {
-        setCount(count + 1);
+        setCount(prevCount => prevCount + 1);
     };
 
     //function to decrement count
     const decrementCount = () => {
-        setCount(count - 1);
+        setCount(prevCount => prevCount - 1);
     };
     //function to reset count
     const resetCount = () => {
         setCount(0);
+    };
+
+    //Method 1: Function that accepts diffrent amounts
+    const handleChangeBy = (amount) => {
+        setCount(prevCount => prevCount + amount);
     };
 
     return(
@@ -26,9 +32,11 @@ function Counter(){
             Count: {count}
             </div>
             <div>
-                <button onClick={incrementCount} style={{margin:'5px'}}>+Increment</button>
-                <button onClick={decrementCount} style={{margin:'5px'}}>-Decrement</button>
-                <button onClick={resetCount} style={{margin:'5px'}}>0Reset</button>
+                <CounterButton onButtonClick={incrementCount} color="yellow" style={{margin:'5px'}}>+Increment</CounterButton>
+                <CounterButton onButtonClick={decrementCount} color="red" style={{margin:'5px'}}>-Decrement</CounterButton>
+                <CounterButton onButtonClick={resetCount} color="blue" style={{margin:'5px'}}>Reset</CounterButton>
+                <CounterButton onButtonClick={() => setCount(100)} color="purple" style={{margin:'5px'}}>Set to 100</CounterButton>
+                <CounterButton onButtonClick={() => setCount(prevCount=> prevCount*2)} color="green" style={{margin:'5px'}}>Set to Double</CounterButton>
             </div>
         </div>
     )
