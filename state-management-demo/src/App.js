@@ -22,9 +22,15 @@ function App(){
 
     const handleAddTask =()=>{
       if(newTask.trim()){
+        const task = {
+          id: Date.now(),
+          text: newTask,
+          completed: false,
 
+        }
+        console.log('Createing task object:', task)
         console.log('Adding task:', newTask);
-        setTasks([...tasks, newTask]);
+        setTasks([...tasks, task]);
         setNewTask('');
 
       }
@@ -46,11 +52,13 @@ function App(){
 
 
       <ul>
-        {tasks.map((task, index)=>(
-          <li key={index}>{task}</li>
+        {tasks.map(task=>(
+          <li key={task.id}>{task.text}</li>
         ))}
       </ul>
     </div>
     );
 }
 export default App;
+
+// 35minutes
