@@ -10,15 +10,31 @@ cons[somthing, setSomthing] = useState(initialValue)
 
 */
 
-import React from "react";
-function App(){
-  console.log("App component rendered");
+import React ,{useState} from "react";
 
-  return(
+function App(){
+
+   const[newTask, setNewTask] = useState('');
+   console.log('Component rendered! Current input:',newTask);
+
+    const handleAddTask =()=>{
+    console.log('Adding task:', newTask);
+    //for now just clear the input
+    setNewTask('');
+    }
+    console.log('Component render! current input:',newTask);
+    
+  
+
+   return(
     <div>
-      <h1>My Task App</h1>
-      <p>Current Time:{new Date().toLocaleTimeString()}</p>
+      <h1>My Task List</h1>
+      <input  
+      value={newTask}
+      onChange={(e)=>setNewTask(e.target.value)}
+      placeholder="Enter Task.....!"/>
+      <button onClick={handleAddTask}>Add Task</button>
     </div>
-  );
+    );
 }
 export default App;
