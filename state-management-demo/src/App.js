@@ -21,9 +21,14 @@ function App(){
    console.log('current input:',newTask)
 
     const handleAddTask =()=>{
-    console.log('Adding task:', newTask);
-    setTasks([...tasks, newTask]);
-    setNewTask('');
+      if(newTask.trim()){
+
+        console.log('Adding task:', newTask);
+        setTasks([...tasks, newTask]);
+        setNewTask('');
+
+      }
+    
     
     }
     console.log('Component render! current input:',newTask);
