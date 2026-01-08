@@ -6,6 +6,8 @@ function Counter(){
     //state to store our current count
 
     const [count, setCount] = useState(0);
+
+    
     //function to increment count
     const incrementCount = () => {
         setCount(prevCount => prevCount + 1);
@@ -56,7 +58,7 @@ function Counter(){
 
                 <CounterButton
                 onButtonClick={()=>handleChangeBy(-1)}
-                color ='lightred'>-1  </CounterButton>
+                color ='skyblue'>-1  </CounterButton>
 
                 <CounterButton
                 onButtonClick={()=>handleChangeBy(-5)}
@@ -76,7 +78,9 @@ function Counter(){
                 color ='purple'>+25 (HOF)  </CounterButton>
             </div>
         </div>
-    )
+
+        
+    );
 
 }
 export default Counter;

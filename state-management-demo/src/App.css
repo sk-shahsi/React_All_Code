@@ -36,31 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-
-.floating-container {
-  position: relative;
-  height: 0;
-}
-
-.floating-text {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  font-weight: bold;
-  color: green;
-  animation: floatUp 1s ease-out forwards;
-}
-
-@keyframes floatUp {
-  0% {
-    opacity: 1;
-    transform: translate(-50%, 0);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -80px);
-  }
-}
