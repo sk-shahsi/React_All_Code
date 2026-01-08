@@ -15,6 +15,7 @@ import React ,{useState} from "react";
 function App(){
 
    const[newTask, setNewTask] = useState('');
+   const[tasks, setTasks] = useState([]);
    console.log('Component rendered! Current input:',newTask);
 
     const handleAddTask =()=>{
@@ -23,7 +24,7 @@ function App(){
     setNewTask('');
     }
     console.log('Component render! current input:',newTask);
-    
+
   
 
    return(
