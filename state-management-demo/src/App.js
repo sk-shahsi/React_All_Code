@@ -38,6 +38,13 @@ function App(){
       onChange={(e)=>setNewTask(e.target.value)}
       placeholder="Enter Task.....!"/>
       <button onClick={handleAddTask}>Add Task</button>
+
+
+      <ul>
+        {tasks.map((task, index)=>(
+          <li key={index}>{task}</li>
+        ))}
+      </ul>
     </div>
     );
 }
