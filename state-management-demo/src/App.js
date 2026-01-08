@@ -17,11 +17,14 @@ function App(){
    const[newTask, setNewTask] = useState('');
    const[tasks, setTasks] = useState([]);
    console.log('Component rendered! Current input:',newTask);
+   console.log('Current tasks:',tasks);
+   console.log('current input:',newTask)
 
     const handleAddTask =()=>{
     console.log('Adding task:', newTask);
-    //for now just clear the input
+    setTasks([...tasks, newTask]);
     setNewTask('');
+    
     }
     console.log('Component render! current input:',newTask);
 
