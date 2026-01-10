@@ -37,8 +37,20 @@ function App(){
     
     
     }
-    console.log('Component render! current input:',newTask);
+    const toggleTask = (id)=>{ 
+    console.log('Toggling task with id:',id);
+    setTasks(tasks.map(task=>{
+      //this is the task we want to toggel
+      if(task.id === id){
+        //create a new task object with complet flipped
 
+        return {...task, completed: !task.completed};
+      }
+
+      return task;
+    }))
+
+    }              
   
 
    return(
@@ -53,7 +65,10 @@ function App(){
 
       <ul>
         {tasks.map(task=>(
-          <li key={task.id}>{task.text}</li>
+          <li key={task.id}>
+            <input type="checkbox" checked={task.completed} 
+            onChange={() => toggleTask(task.id)}
+            />{task.text}</li>
         ))}
       </ul>
     </div>
@@ -61,4 +76,3 @@ function App(){
 }
 export default App;
 
-// 35minutes
