@@ -18,7 +18,12 @@ function App(){
    const[tasks, setTasks] = useState([]);
    const totalTasks = tasks.length;
    const completedTasks = tasks.filter(task => task.completed).length;
-    const remaningTasks = totalTasks - completedTasks;
+    const remaningTasks = totalTasks - completedTasks; 
+
+    
+    const completedPercentage = totalTasks > 0 ? 
+    Math.round((completedTasks / totalTasks) * 100) : 0;
+
     console.log('stats - total:', totalTasks, 'completed:', completedTasks, 'remaining:', remaningTasks);
    console.log('Component rendered! Current input:',newTask);
    console.log('Current tasks:',tasks);
@@ -98,4 +103,3 @@ function App(){
     );
 }
 export default App;
-
