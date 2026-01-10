@@ -87,7 +87,8 @@ function App(){
               borderRadius:'10px',
               overflow:'hidden',
              }}>
-                 <div stylre={{
+
+                 <div style={{
                 width:`${completedPercentage}%`,
                 height:'100%',
                 backgroundColor:'#4caf50',
@@ -100,7 +101,7 @@ function App(){
             
                 </div>
             </div>
-            <p>{completedPercentage}%</p>
+            <p>Progress:{completedPercentage}%</p>
            </div>
       <input  
       value={newTask}
