@@ -67,6 +67,13 @@ function App(){
    return(
     <div>
       <h1>My Task List</h1>
+      <div style={{
+        backgroundColor: '#f0f0f0', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+          <h3>Task Statistics</h3>
+          <p>Total Tasks: {totalTasks}</p>
+          <p>Completed Tasks: {completedTasks}</p>
+          <p>Remaining Tasks: {remaningTasks}</p>
+           </div>
       <input  
       value={newTask}
       onChange={(e)=>setNewTask(e.target.value)}
