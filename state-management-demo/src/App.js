@@ -37,6 +37,7 @@ function App(){
     
     
     }
+
     const toggleTask = (id)=>{ 
     console.log('Toggling task with id:',id);
     setTasks(tasks.map(task=>{
@@ -50,7 +51,13 @@ function App(){
       return task;
     }))
 
-    }              
+    }  
+    
+    const deleteTask = (id) =>{
+      console.log("Deleting task with id:", id);
+      setTasks(tasks.filter(task => task.id !== id));
+
+    }
   
 
    return(
@@ -68,7 +75,12 @@ function App(){
           <li key={task.id}>
             <input type="checkbox" checked={task.completed} 
             onChange={() => toggleTask(task.id)}
-            />{task.text}</li>
+            />
+            <span>{task.text}</span>
+
+            <button onClick={() => deleteTask(task.id)}>Delete</button>
+              
+              </li>
         ))}
       </ul>
     </div>
