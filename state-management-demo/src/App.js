@@ -78,6 +78,29 @@ function App(){
           <p>Total Tasks: {totalTasks}</p>
           <p>Completed Tasks: {completedTasks}</p>
           <p>Remaining Tasks: {remaningTasks}</p>
+
+          
+            <div style={{
+              width:'100%',
+              height:'20px',
+              backgroundColor:'#ddd',
+              borderRadius:'10px',
+              overflow:'hidden',
+             }}>
+                 <div stylre={{
+                width:`${completedPercentage}%`,
+                height:'100%',
+                backgroundColor:'#4caf50',
+                transition:'width 0.3s ease'
+              }}>
+              
+
+            
+            
+            
+                </div>
+            </div>
+            <p>{completedPercentage}%</p>
            </div>
       <input  
       value={newTask}
