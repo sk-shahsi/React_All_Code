@@ -16,6 +16,10 @@ function App(){
 
    const[newTask, setNewTask] = useState('');
    const[tasks, setTasks] = useState([]);
+   const totalTasks = tasks.length;
+   const completedTasks = tasks.filter(task => task.completed).length;
+    const remaningTasks = totalTasks - completedTasks;
+    console.log('stats - total:', totalTasks, 'completed:', completedTasks, 'remaining:', remaningTasks);
    console.log('Component rendered! Current input:',newTask);
    console.log('Current tasks:',tasks);
    console.log('current input:',newTask)
