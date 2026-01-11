@@ -70,6 +70,14 @@ const bollywoodMovies =[
 ];
 
 function BollywoodMovies() {
+    //state for loading indicator
+    const[loading, setLoading]= useState (false);
+    //state for genre filtering
+    const[selectedGenre, setSelectedGenre]= useState ('All');
+
+    //state for movies
+    const [movies, setMovies]= useState (bollywoodMovies);
+
     return(
         <div className="bollywood-movies">
             <h2>Bollywood Hits</h2>
