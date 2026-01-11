@@ -77,10 +77,14 @@ function BollywoodMovies() {
 
     //state for movies
     const [movies, setMovies]= useState (bollywoodMovies);
+    const[searchTerm , setSearchTerm]= useState ('');
+    const[sortBy, setSortBy]= useState ('title');
 
     return(
         <div className="bollywood-movies">
             <h2>Bollywood Hits</h2>
+
+
 
             </div >
     )
