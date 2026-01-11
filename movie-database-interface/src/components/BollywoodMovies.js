@@ -83,6 +83,11 @@ function BollywoodMovies() {
     return(
         <div className="bollywood-movies">
             <h2>Bollywood Hits</h2>
+            {loading &&(
+                <div className="loading-spinner">
+                    Loading...
+                </div>
+            )}
 
 
 
