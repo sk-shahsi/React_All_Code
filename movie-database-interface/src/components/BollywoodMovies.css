@@ -19,3 +19,35 @@ body{
     color: #ffffff;
     line-height: 1.6;
 }
+
+.bollywood-movies{
+    padding: 2rem;
+    text-align: center;
+
+
+}
+
+.bollywood-movies h1{
+    font-size:3rem;
+    margin-bottom: 2rem;
+    color:#ffcc00;
+    text-shadow: 2px 2px 5px #000000;
+
+}
+.movies-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap:2rem;
+    padding:1rem;
+}
+.movie-card{
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+}
+
+
