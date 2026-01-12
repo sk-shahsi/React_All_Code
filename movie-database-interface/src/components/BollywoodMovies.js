@@ -109,7 +109,7 @@ function BollywoodMovies() {
                             <p className='movie-genre'>{movie.genre}</p>
                             <p className='movie-director'>Dir: {movie.director}</p>
                             <p className='movie-cast'>Cast: {movie.cast.join (', ')}</p>
-                            <p className='movie-rating'>{movie.rating}/10</p>
+                            <p className={'movie-rating rating-${gerRatingCtegory(movie.rating)}'}>{movie.rating}/10</p>
                             
                             
                             </div>
