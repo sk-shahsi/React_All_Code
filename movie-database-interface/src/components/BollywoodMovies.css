@@ -27,7 +27,7 @@ body{
 
 }
 
-.bollywood-movies h1{
+.bollywood-movies h2{
     font-size:3rem;
     margin-bottom: 2rem;
     color:#ffcc00;
@@ -52,6 +52,54 @@ body{
 .movie-card:hover{
     transform: translateY(-8px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.movie-image{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+
+}
+.movie-title{
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    color:#ffdd57;
+}
+.movie-year,
+.movie-genre,
+.movie-director,
+.movie-cast{
+    font-size: 0.95rem;
+    margin:0.2rem 0;
+    color: #cccccc;
+
+
+
+}
+
+.movie-rating{
+    margin-top: 0.7rem;
+    font-weight: bold;
+    padding: 0.4rem;
+    border-radius: 8px;
+}
+.rating-blockbuster{
+    background-color: #28a745;
+    color: #ffffff;
+}
+.rating-superhit{
+    background-color: #17a2b8;
+    color: #ffffff;
+}
+.rating-hit{
+    background-color: #ffc107;
+    color: #000;
+}
+.rating-average{
+    background-color: #dc3545;
+    color: #ffffff;
 }
 
 
