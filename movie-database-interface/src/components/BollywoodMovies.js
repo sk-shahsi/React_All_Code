@@ -85,9 +85,13 @@ function BollywoodMovies() {
             <h2>Bollywood Hits</h2>
             {loading &&(
                 <div className="loading-spinner">
-                    Loading...
+                    <p>Loading BollywoodMovies....</p>
                 </div>
             )}
+
+            <button onClick={()=>setLoading(! loading)}>   
+                 {loading ? 'Stop Loading':'Start Loading'}
+                 </button>
 
 
 
