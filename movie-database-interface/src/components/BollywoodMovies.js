@@ -80,18 +80,37 @@ function BollywoodMovies() {
     const[searchTerm , setSearchTerm]= useState ('');
     const[sortBy, setSortBy]= useState ('title');
 
+    //{condation && <Component>}
+    //condation ? valueIfTrue : valueIfFalse
     return(
         <div className="bollywood-movies">
             <h2>Bollywood Hits</h2>
-            {loading &&(
+            {loading ?(
                 <div className="loading-spinner">
                     <p>Loading BollywoodMovies....</p>
                 </div>
-            )}
+            ):(<div className='main-contant'>
+                <div className='movies-grid'>
+                    {movies.map((movie) =>(
+                        <div className='movie-card' key={movie.id}>
+                            <img 
+                            src={movie.Image}
+                            alt={'${movie.title} Poster'}
+                            className='movie-image'/>
+                            <h3 className='movie-title'>{movie.title}</h3>
+                            <p className='movie-year'>{movie.year}</p>
+                            <p className='movie-genre'>{movie.genre}</p>
+                            <p className='movie-director'>Dir: {movie.director}</p>
+                            <p className='movie-rating'>{movie.rating}/10</p>
+                            
+                            </div>
+                    ))}
 
-            <button onClick={()=>setLoading(! loading)}>   
-                 {loading ? 'Stop Loading':'Start Loading'}
-                 </button>
+                    </div>
+                
+                </div>)}
+
+            
 
 
 
