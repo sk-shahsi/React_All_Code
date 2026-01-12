@@ -24,7 +24,7 @@ const bollywoodMovies =[
     rating:9.9,
     year:2025,
     director:"Siddharth Anand",
-    Image:"https://m.media-amazon.com/images/M/MV5BMTc5ZmYzMDAtZTIwZi00ZjYyLWI3YjItY2E3Y2EwZTI2ZWRhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg",
+    Image:"https://images.indianexpress.com/2024/01/fighter-28012024.jpg",
     cast:["Hrithik Roshan","Deepika Padukone"],
 
     },
@@ -36,7 +36,7 @@ const bollywoodMovies =[
     rating:9.9,
     year:2025,
     director:"Rajkumar Santoshi",
-    Image:"https://m.media-amazon.com/images/M/MV5BMTc5ZmYzMDAtZTIwZi00ZjYyLWI3YjItY2E3Y2EwZTI2ZWRhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg",
+        Image:"https://mxp-media.ilnmedia.com/media/content/2025/Jul/image-1_6878a8415b761.jpeg?w=780&h=1064&cc=1",
     cast:["ranvir Singh","Alia Bhatt"],
 
     },
@@ -51,7 +51,7 @@ const bollywoodMovies =[
     genre:"Action",
     year:2023,
     director:"vishal Furia",
-    Image:"https://m.media-amazon.com/images/M/MV5BMTc5ZmYzMDAtZTIwZi00ZjYyLWI3YjItY2E3Y2EwZTI2ZWRhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg",
+    Image:"https://c8.alamy.com/comp/2RXMA5E/kraven-the-hunter-poster-aaron-taylor-johnson-2RXMA5E.jpg",
     cast:["Vijay Sethupathi","Ananya Panday"],
 
     },
@@ -62,7 +62,7 @@ const bollywoodMovies =[
     rating:8.9,
     year:2025,
     director:"Abbas-Mustan",
-    Image:"https://m.media-amazon.com/images/M/MV5BMTc5ZmYzMDAtZTIwZi00ZjYyLWI3YjItY2E3Y2EwZTI2ZWRhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg",
+    Image:"https://stat4.bollywoodhungama.in/wp-content/uploads/2023/06/Tere-Ishk-Mein27.jpg",
     cast:["Dhanush","kriti Sanon"],
 
     },
@@ -101,7 +101,9 @@ function BollywoodMovies() {
                             <p className='movie-year'>{movie.year}</p>
                             <p className='movie-genre'>{movie.genre}</p>
                             <p className='movie-director'>Dir: {movie.director}</p>
+                            <p className='movie-cast'>Cast: {movie.cast.join (', ')}</p>
                             <p className='movie-rating'>{movie.rating}/10</p>
+                            
                             
                             </div>
                     ))}
