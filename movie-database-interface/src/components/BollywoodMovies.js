@@ -80,6 +80,13 @@ function BollywoodMovies() {
     const[searchTerm , setSearchTerm]= useState ('');
     const[sortBy, setSortBy]= useState ('title');
 
+    const gerRatingCtegory = (rating) => {
+        if (rating >= 9.5) return 'blockbuster';
+        if (rating >= 8.5) return 'superhit';
+        if (rating >= 7.5) return 'hit';
+        return 'average';
+    }
+
     //{condation && <Component>}
     //condation ? valueIfTrue : valueIfFalse
     return(
@@ -92,7 +99,7 @@ function BollywoodMovies() {
             ):(<div className='main-contant'>
                 <div className='movies-grid'>
                     {movies.map((movie) =>(
-                        <div className='movie-card' key={movie.id}>
+                        <div className={'movie-card ${gerRatingCtegory(movie.rating)}'} key={movie.id}>
                             <img 
                             src={movie.Image}
                             alt={movie.title}
