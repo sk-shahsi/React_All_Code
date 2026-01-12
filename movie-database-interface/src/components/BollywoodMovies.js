@@ -11,7 +11,7 @@ const bollywoodMovies =[
     rating:8.9,
     year:2025,
     director:"David Dhawan",
-    Image:"https://m.media-amazon.com/images/M/MV5BMTYzZGI3ZTItY2E3Ny00ZjQyLWI3YjItY2E3Y2EwZTI2ZWRhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg",
+    Image:"https://stat4.bollywoodhungama.in/wp-content/uploads/2022/02/Bade-Miyan-Chote-Miyan-1.jpg",
     cast:["Akshay Kumar","Salman Khan"],
 
     },
@@ -95,7 +95,7 @@ function BollywoodMovies() {
                         <div className='movie-card' key={movie.id}>
                             <img 
                             src={movie.Image}
-                            alt={'${movie.title} Poster'}
+                            alt={movie.title}
                             className='movie-image'/>
                             <h3 className='movie-title'>{movie.title}</h3>
                             <p className='movie-year'>{movie.year}</p>
