@@ -128,5 +128,11 @@ search-results{
 }
 .filter-section{
     margin-bottom: 2rem;
-    
+
 }
+filter-section h4{
+margin-bottom: 0.5rem;
+color: #ffdd57;
+font-weight: 600;
+}
+
