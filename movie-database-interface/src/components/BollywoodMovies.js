@@ -128,7 +128,9 @@ function BollywoodMovies() {
           </div>
 
           <div className="movies-grid">
-            {filteredMovies.map(movie => (
+
+            {filteredMovies.length > 0 ?
+            (filteredMovies.map(movie => (
               <div className="movie-card" key={movie.id}>
                 <img
                   src={movie.Image}
@@ -144,7 +146,18 @@ function BollywoodMovies() {
                   {movie.rating}/10
                 </p>
               </div>
-            ))}
+            ))):(
+                 <div className='empty-state'>
+
+                  <h3>No Bollywood movies found!</h3>
+                  <p>
+                    {searchTerm || selectedGenre !== 'All' ? 
+                  "Try adjusting your search or filter criteria":
+                  "Start searching to find amazing Bollywood movies!"  
+                  }
+                  </p>
+                 </div>
+            )}
           </div>
         </div>
       )}
