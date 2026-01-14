@@ -83,6 +83,20 @@ function BollywoodMovies() {
     
   });
 
+  const sortedAndFilteredMovies = filteredMovies.sort((a,b)=>{
+    switch(sortBy){
+      case 'rating':
+        return b.rating - a.rating;
+      case 'year':
+        return b.year - a.year;
+      case 'genre':
+        return a.genre.localeCompare(b.genre);
+      case 'title':
+        default:
+          return a.title.localeCompare(b.title);
+    }
+  })
+
   const genres = ['All', ...new Set(movies.map(movie => movie.genre))];
 
   return (
@@ -126,6 +140,21 @@ function BollywoodMovies() {
               ))}
             </div>
           </div>
+              <div className='sort-section'>
+                <label htmlFor='sort-select'>Sort By:</label>
+                <select
+                id='sort-select'
+                value={sortBy}
+                onChange={(e)=>setSortBy(e.target.value)}>
+                  <option value="title">Title(A-Z)</option>
+                  <option value="rating">Rating(High - Low)</option>
+                  <option value="year">Year(Newest First)</option>
+                  <option value="genre">Genre(A-Z)</option>
+                  </select>
+
+
+              </div>
+
           {
             (searchTerm || selectedGenre !== 'All') && (
               <button
@@ -139,8 +168,8 @@ function BollywoodMovies() {
 
           <div className="movies-grid">
 
-            {filteredMovies.length > 0 ?
-            (filteredMovies.map(movie => (
+            {sortedAndFilteredMovies.length > 0 ?
+            (sortedAndFilteredMovies.map(movie => (
               <div className="movie-card" key={movie.id}>
                 <img
                   src={movie.Image}
