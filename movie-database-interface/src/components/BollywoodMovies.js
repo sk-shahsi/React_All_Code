@@ -130,7 +130,7 @@ function BollywoodMovies() {
             (searchTerm || selectedGenre !=='All' && (
               <button
               className='clear-filters'
-              onClick={()=>{
+              onClick={()=> {
                 setSearchTerm('');
                 setSelectedGenre('All');
               }}>Clear All Filters</button>
