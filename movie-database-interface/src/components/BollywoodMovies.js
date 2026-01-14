@@ -126,6 +126,16 @@ function BollywoodMovies() {
               ))}
             </div>
           </div>
+          {
+            (searchTerm || selectedGenre !=='All' && (
+              <button
+              className='clear-filters'
+              onClick={()=>{
+                setSearchTerm('');
+                setSelectedGenre('All');
+              }}>Clear All Filters</button>
+            ))
+          }
 
           <div className="movies-grid">
 
@@ -167,4 +177,4 @@ function BollywoodMovies() {
 
 export default BollywoodMovies;
 
-//20 min
+//34 min
