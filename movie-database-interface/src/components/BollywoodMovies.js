@@ -59,6 +59,8 @@ function BollywoodMovies() {
   const [selectedGenre, setSelectedGenre] = useState('All');
   const [movies] = useState(bollywoodMovies);
   const [searchTerm, setSearchTerm] = useState('');
+  
+  const [sortBy, setSortBy] = useState('title');
 
   const getRatingCategory = (rating) => {
     if (rating >= 9.5) return 'blockbuster';
@@ -83,7 +85,7 @@ function BollywoodMovies() {
     
   });
 
-  const sortedAndFilteredMovies = filteredMovies.sort((a,b)=>{
+  const sortedAndFilteredMovies =[ ...filteredMovies].sort((a,b)=>{
     switch(sortBy){
       case 'rating':
         return b.rating - a.rating;
