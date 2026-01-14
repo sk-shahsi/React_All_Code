@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useMemo} from 'react';
 import './BollywoodMovies.css';
 
 const bollywoodMovies = [
@@ -59,6 +59,7 @@ function BollywoodMovies() {
   const [selectedGenre, setSelectedGenre] = useState('All');
   const [movies] = useState(bollywoodMovies);
   const [searchTerm, setSearchTerm] = useState('');
+  // const filteredMovies = movies.filter('');
   
   const [sortBy, setSortBy] = useState('title');
 
@@ -69,7 +70,14 @@ function BollywoodMovies() {
     return 'average';
   };
 
-  const filteredMovies = movies.filter(movie => {
+  
+
+ 
+
+  const sortedAndFilteredMovies =useMemo(()=>{
+    //filter movies first
+
+    const filtered = movies.filter(movie => {
     const searchLower = searchTerm.toLowerCase();
 
     const matchesSearch =
@@ -83,9 +91,13 @@ function BollywoodMovies() {
       return matchesSearch && matchesGenre;
      
     
-  });
+    });
 
-  const sortedAndFilteredMovies =[ ...filteredMovies].sort((a,b)=>{
+
+    //then sort the filterd  result
+
+
+     return filtered.sort((a,b)=>{
     switch(sortBy){
       case 'rating':
         return b.rating - a.rating;
@@ -97,7 +109,9 @@ function BollywoodMovies() {
         default:
           return a.title.localeCompare(b.title);
     }
-  })
+  });
+
+  },[movies,searchTerm,selectedGenre,sortBy]);
 
   const genres = ['All', ...new Set(movies.map(movie => movie.genre))];
 
@@ -122,8 +136,8 @@ function BollywoodMovies() {
 
             {searchTerm && (
               <p className="search-results">
-                Found {filteredMovies.length} movie
-                {filteredMovies.length !== 1 ? 's' : ''} for "{searchTerm}"
+                Found {sortedAndFilteredMovies.length} movie
+                {sortedAndFilteredMovies.length !== 1 ? 's' : ''} for "{searchTerm}"
               </p>
             )}
           </div>
@@ -208,4 +222,3 @@ function BollywoodMovies() {
 
 export default BollywoodMovies;
 
-//34 min
