@@ -52,6 +52,36 @@ const bollywoodMovies = [
     Image: "https://stat4.bollywoodhungama.in/wp-content/uploads/2023/06/Tere-Ishk-Mein27.jpg",
     cast: ["Dhanush", "Kriti Sanon"],
   },
+  {
+    id: 6,
+    title: "Phas Gaye Re Obama",
+    genre: "Comedy",
+    rating: 6.9,
+    year: 2010,
+    director: "Subhash Kapoor",
+    Image: "https://upload.wikimedia.org/wikipedia/en/b/bb/Car-Poster-Final_12x18.jpg",
+    cast: ["Neha Dhupia", "Sanjay Mishra"],
+  },
+  {
+    id: 7,
+    title: "Mrs. Chatterjee vs. Norway",
+    genre: "Biography",
+    rating: 7.3,
+    year: 2023,
+    director: "Ashima Chibber",
+    Image: "https://m.media-amazon.com/images/M/MV5BYmMwMDM5ZmEtNzkyZi00MjY3LWJiMzMtMWVjMWYxMzFiMzIxXkEyXkFqcGc@._V1_.jpg",
+    cast: ["Rani MukerjiJim" ,"SarbhBodhisattva Mazumdar"],
+  },
+  {
+    id: 8,
+    title: "Beta",
+    genre: "Romance",
+    rating: 5.9,
+    year: 1992,
+    director: "Indra Kumar",
+    Image:"https://m.media-amazon.com/images/M/MV5BYzU0NjVhYzktY2Q4Zi00MTUzLTlmZTUtODI5ODdlYTg1YjNkXkEyXkFqcGc@._V1_.jpg",
+    cast: ["Anil Kapoor", "Madhuri Dixit"]
+  },
 ];
 
 function BollywoodMovies() {
