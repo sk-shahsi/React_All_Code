@@ -127,14 +127,14 @@ function BollywoodMovies() {
             </div>
           </div>
           {
-            (searchTerm || selectedGenre !=='All' && (
+            (searchTerm || selectedGenre !== 'All') && (
               <button
               className='clear-filters'
               onClick={()=> {
                 setSearchTerm('');
                 setSelectedGenre('All');
               }}>Clear All Filters</button>
-            ))
+            )
           }
 
           <div className="movies-grid">
