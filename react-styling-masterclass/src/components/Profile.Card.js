@@ -18,11 +18,30 @@ const ProfileCard = ()=>{
 
                 <div className="{styles.stats}">
                     <div className="{styles.stat}">
-                        <span className="{}">1.2k</span>
-                        <span>Followers</span>
+                        <span className="{styles.statNumber}">1.2k</span>
+                        <span className="styles.statLabel">Followers</span>
+
+                    </div>
+                      <div className="{styles.stat}">
+                        <span className="{styles.statNumber}">500</span>
+                        <span className="styles.statLabel">Following</span>
+
+                    </div>
+                      <div className="{styles.stat}">
+                        <span className="{styles.statNumber}">1</span>
+                        <span className="styles.statLabel">Projects</span>
 
                     </div>
                 </div>
+                    <p className="{styles.bio}">Passionate about creating beautyful, user-friendly web experience.
+                       love working with React, Typescripte and modern web Techonlogy.
+                    </p>
+
+                    <div className="{styles.actions}">
+                        <button className="{styles.primaryButton}">Follow</button>
+                        <button className="{styles.secondaryButton}">message</button>
+                    </div>
+
             </div>
 
         </div>
