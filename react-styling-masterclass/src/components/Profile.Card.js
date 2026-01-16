@@ -15,6 +15,14 @@ const ProfileCard = ()=>{
             <div className="{styles.cardBody}">
                 <h2 className="{styles.name}">Aashish Ranjan</h2>
                 <p className="{styles.title}">Frontent Developer</p>
+
+                <div className="{styles.stats}">
+                    <div className="{styles.stat}">
+                        <span className="{}">1.2k</span>
+                        <span>Followers</span>
+
+                    </div>
+                </div>
             </div>
 
         </div>
