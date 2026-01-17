@@ -46,3 +46,109 @@ const ProfileImageContainer = styled.div`
          display: block;
     }
 `;
+
+const CardBody =styled.div`
+    padding: 30px;
+    text-align: center;
+`;
+
+
+const Name = styled.h2`
+    margin: 0 0 5px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d3748;
+    letter-spacing: -0.5px;
+    `
+;
+
+const Title = styled.p`
+   margin: 0 0 25px 0;
+   font-size: 16px;
+   color: #718096;
+   font-weight: 500; 
+`
+;
+const StateContainer = styled.div`
+    display: flex;
+    justify-content: space-around;
+    margin: 25px;
+    padding: 20px;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+`
+;
+const Stat = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+`
+
+const StatNumber =styled.span`
+    font-size: 20px;
+    font-weight: 700;
+    color: #2d3748;
+    line-height: 1;
+`;
+
+const StatLable = styled.span`
+    font-size: 12px;
+    color: #a0aec0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+`;
+const Bio =styled.p`
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4a5568;
+    margin: 0 0 25px 0;
+    text-align: center;
+`;
+const Action = styled.div`
+    display: flex;
+    gap:12px;
+    justify-content: center;
+`
+;
+const PrimaryButton = styled.button`
+    flex: 1;
+    padding: 12px;
+    background: linear-gradient(135deg,#667eea 0% ,#764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transform: all 0.2e ease;
+
+    & hover{
+        transform: translate(-2px);
+        box-shadow: 0 10px 25px rgba(102,126,234,0.3);
+
+    }
+`
+;
+
+const SecondaryButton = styled.button`
+    flex: 1;
+    padding: 12px;
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transform: all 0.2e ease;
+    
+
+
+    &hover{
+        background: #667eea;
+        color: white;
+        transform: translate(-2px);
+    }
+        
+    `
+    ;
